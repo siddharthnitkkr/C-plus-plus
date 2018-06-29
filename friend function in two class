@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class mno;
+class pqr
+{
+    int data;
+    public:
+    void insert(int x)
+    {
+        data=x;
+    }
+    friend void sum(pqr,mno);
+    
+};
+class mno
+{
+    int data;
+    public:
+    void insert(int x)
+    {
+        data=x;
+    }
+    friend void sum(pqr,mno);
+    
+    
+};
+
+void sum(pqr a,mno b)
+{
+    cout<<a.data+b.data<<endl;
+}
+int main()
+{
+    pqr a;
+    a.insert(5);
+    mno b;
+    b.insert(7);
+    sum(a,b);
+    
+}
