@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+
+class mother
+{
+    protected:
+     int property_value=10;
+   
+};
+
+class son:public mother
+{
+     int son_property;
+     public:
+     void insert_son_property()
+     {
+           son_property=property_value/2;
+     }
+     void display()
+     {
+        cout<<son_property;
+     }
+};
+
+class daughter:public mother
+{
+     int daughter_property;
+     public:
+     void insert_daughter_property()
+     {
+           daughter_property=property_value/2;
+     }
+     void display()
+     {
+        cout<<" "<<daughter_property;
+     }
+     
+};
+
+
+int main()
+{
+    son s;
+    daughter d;
+    mother m;
+  s.insert_son_property();
+  d.insert_daughter_property();
+    s.display();
+    d.display();
+    
+    return 0;
+}
