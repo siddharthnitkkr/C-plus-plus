@@ -1,0 +1,70 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    protected:
+      int roll;
+    public:
+      void insertroll(int a)
+      {
+          roll=a;
+          
+      }
+      void displayroll()
+      {
+          cout<<"roll no is"<<roll<<endl;
+      }
+};
+
+class marks:public student
+{
+    
+    protected :
+    int s1,s2 ,s3;
+    public:
+       void insertmarks(int a,int b,int c)
+       {
+           s1=a;
+           s2=b;
+           s3=c;
+           
+       }
+      void displaymarks()
+      {
+          cout<<s1<<" "<<s2<<" "<<s3<<" "<<endl;
+      }
+    
+    
+};
+
+class result: public marks
+{
+      private:
+       int tot;
+      public:
+      void total()
+      {
+          tot=s1+s2+s3;
+      }
+      void display()
+      {
+          cout<<"totall is"<<tot<<endl;
+      }
+      
+};
+
+int main()
+{
+    
+    result r;
+    r.insertroll(10);
+    r.displayroll();
+    r.insertmarks(100,50,60);
+    r.displaymarks();
+    r.total();
+    r.display();
+    return 0;
+    
+    
+    
+}
