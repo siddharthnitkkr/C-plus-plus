@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class father
+{
+    int x;
+    public:
+     
+     void insert(int a)
+     {
+         x=a;
+         
+     }
+     void display()
+     {
+         cout<<x<<endl;
+     }    
+     int getx()
+     {
+         return x;
+     }
+     
+    
+    
+};
+class son : public father
+{
+    public:
+    void display()
+    {
+        cout<<"value of father"<<getx()<<endl;
+    }
+    
+};
+
+int main()
+{
+    
+    son b;
+    b.insert(12);
+    b.display();
+    return 0;
+}
